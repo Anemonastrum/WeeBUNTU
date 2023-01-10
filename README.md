@@ -1,3 +1,7 @@
-# RemasterUbuntu
+## Linux Base 
+- Ubuntu 22.04.1 Jammy
 
-Linux Base Ubuntu 22.04 LTS (Jammy)
+## Install pre-requisities
+
+Update the package lists:
+1, sudo apt-get update
