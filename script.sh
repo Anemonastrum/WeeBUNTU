@@ -45,22 +45,22 @@ sudo apt update -y
 sudo apt install gnome-tweaks
 sleep 1
 printf "\n \n Installing GTK Themes"
-./ANEGTK/install.sh -n AnemonizeTheme -t all -c Light -o normal -i ubuntu -m --round
+./"$ANEGTK/install.sh" -n AnemonizeTheme -t all -c Light -o normal -i ubuntu -m --round
 sleep 1
 printf "\n \n Installing Icons"
-./ANEICNS/install.sh -n AnemonizeICONS
+./"$ANEICNS"/install.sh -n AnemonizeICONS
 sleep 1
 printf "\n \n Installing Fonts"
-cp ANEFONTS/* ~/.local/share/Fonts
+cp "$ANEFONTS"/* ~/.local/share/Fonts
 sleep 1
 printf "\n \n Installing Cursors"
-./ANECUR/install.sh
+./"$ANECUR"/install.sh
 mkdir ~/.icons
 cp ~/.local/share/icons/Vimic-cursors ~/.icons
 sleep 1
 printf "\n \n Installing GNOME Extensions"
-cp ANEEXT/* ~/.local/share/gnome-shell/extensions
+cp "$ANEEXT"/* ~/.local/share/gnome-shell/extensions
 sleep 1
 printf "\n \n Applying Configurations"
-dconf load ANECONF/
+dconf load "$ANECONF"/
 sleep 1
