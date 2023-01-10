@@ -1,6 +1,13 @@
 ## Linux Base 
 - Ubuntu 22.04.1 Jammy [Link](http://releases.ubuntu.com/jammy/)
 
+## Sources
+- GTK THEME [Source](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+- Cursors [Source](https://github.com/vinceliuice/Vimix-cursors)
+- GNOME Extensions User Themes, ArcMenu, Blur my Shell, Dash to Panel, GSConnect, Media-Controls, Coverflow Alt-Tab
+
+## Features to Add
+
 ## Install pre-requisities
 
 Mengupdate daftar paket:
