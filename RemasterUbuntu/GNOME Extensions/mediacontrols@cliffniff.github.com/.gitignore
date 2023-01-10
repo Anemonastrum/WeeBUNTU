@@ -1,0 +1,6 @@
+*.compiled
+*.zip
+.vscode
+prefs3.ui~
+/build
+/aur
