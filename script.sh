@@ -7,6 +7,7 @@ ANEEXT="GNOME Extensions"
 ANEFONTS="Fonts"
 ANECONF="Configuration"
 ANEICNS="Icons"
+ANEWALL="Wallpapers"
 
 
 anemonabanner()
@@ -41,25 +42,25 @@ printf "\n \n Insallation Started...."
 sleep 1
 printf "\n \n Preparing Resources"
 printf "\n \n Installing Packages"
+clear
 sudo apt update -y
-sudo apt install gnome-tweaks gnome-shell
+sudo apt install gnome-tweaks gnome-shell gnome-shell-extensions -y
 sleep 1
 clear
+anemonabanner
 printf "\n \n Installing GTK Themes"
-./"$ANEGTK/install.sh" -n AnemonizeTheme -t blue -c Light -o normal -i ubuntu -m --round
+./"$ANEGTK/install.sh" -n AnemonizeTheme -t blue -c Light -o normal -i ubuntu -m --round -s 260
 sleep 1
 printf "\n \n Installing Icons"
 ./"$ANEICNS"/install.sh -n AnemonizeICONS
 sleep 1
 printf "\n \n Installing Fonts"
-mkdir ~/.local/share/Fonts/
-cp -r "$ANEFONTS"/* ~/.local/share/Fonts/
+mkdir ~/.local/share/fonts/
+cp -r "$ANEFONTS"/* ~/.local/share/fonts/
 sleep 1
 printf "\n \n Installing Cursors"
-./"$ANECUR"/install.sh
-mkdir ~/.icons
-cp -r ~/.local/share/icons/Cursors ~/.icons
-cp -r ~/.local/share/icons/Vimix-cursors ~/.icons
+cp -r ./"$ANECUR"/AnemonizeCur ~/.local/share/icons/
+cp -r ~/.local/share/icons/AnemonizeCur ~/.icons
 sleep 1
 printf "\n \n Installing GNOME Extensions"
 mkdir ~/.local/share/gnome-shell/extensions
@@ -82,12 +83,12 @@ dconf load /org/gnome/shell/extensions/< "$ANECONF"/all_extension_settings.conf
 sleep 1
 printf "\n \n Applying Addtional Configurations"
 gsettings set org.gnome.desktop.interface gtk-theme AnemonizeTheme-Light-blue
-gsettings set org.gnome.desktop.interface cursor-theme Vimix-cursors
+gsettings set org.gnome.desktop.interface cursor-theme AnemonizeCur
 gsettings set org.gnome.desktop.interface icon-theme AnemonizeICONS-light
 gsettings set org.gnome.shell.extensions.user-theme name AnemonizeTheme-Light-blue
 gsettings set org.gnome.desktop.sound theme-name freedesktop
-gsettings set org.gnome.desktop.background picture-uri "file:///usr/share/backgrounds/ubuntu_by_arman1992.jpg"
-gsettings set org.gnome.desktop.screensaver "file:///usr/share/backgrounds/ubuntu_by_arman1992.jpg"
+gsettings set org.gnome.desktop.background picture-uri "file:///usr/share/backgrounds/canvas_by_roytanck.jpg"
+gsettings set org.gnome.desktop.screensaver "file:///usr/share/backgrounds/canvas_by_roytanck.jpg"
 gsettings set org.gnome.desktop.interface font-name "Roboto 11"
 gsettings set org.gnome.desktop.interface document-font-name "Roboto 11"
 gsettings set org.gnome.desktop.interface monospace-font-name "Roboto 11"
@@ -102,7 +103,8 @@ mkdir ~/.config/autostart
 cp -r "$ANECONF"/Graffias ~/.config/conky/
 cp -r "$ANECONF"/start_conky.desktop ~/.config/autostart/
 sleep 1
-./"$ANEGTK"/tweaks.sh -s
-./"$ANEGTK"/tweaks.sh -f monterey
+sudo ./"$ANEGTK"/tweaks.sh -s
+sleep 1
+sudo ./"$ANEGTK"/tweaks.sh -f monterey
 sleep 1
 printf "\n \n Done"

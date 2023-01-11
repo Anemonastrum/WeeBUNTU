@@ -1,13 +1,10 @@
-<svg width="16" height="16" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
- <style id="current-color-scheme" type="text/css">.ColorScheme-Highlight {
-            color:#3daee9;
-        }
-        .ColorScheme-Text {
-            color:#232629;
-        }</style>
- <g transform="translate(-3 -3)">
-  <rect transform="matrix(0,-1,-1,0,0,0)" x="-19" y="-19" width="16" height="16" rx="8.0019" ry="8.0019" fill="#3daee9" stroke-width="3.7798"/>
-  <path d="m11 3c-4.432 0-8 3.568-8 8 0 0.16818 0.0055 0.33446 0.015625 0.5 0.25676-4.197 3.7206-7.5 7.9844-7.5s7.7276 3.303 7.9844 7.5c0.01013-0.16554 0.01563-0.33182 0.01563-0.5 0-4.432-3.568-8-8-8z" fill="#ffffff" opacity=".1" stroke-width="3.7798"/>
-  <path d="m13 8v2h-3c-1.662 0-3 1.338-3 3v4.9336c0.61892 0.35663 1.2897 0.63486 2 0.81641v-5.75c0-0.554 0.446-1 1-1h3v2l4-3-4-3z" fill="#ffffff"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+ <path 
+     style="fill:#f47750;fill-opacity:1;stroke:none" 
+     d="M 8 1 A 7 7 0 0 0 1 8 A 7 7 0 0 0 8 15 A 7 7 0 0 0 15 8 A 7 7 0 0 0 8 1 z "
+     />
+ <path 
+     style="fill:#ffffff;fill-opacity:1;stroke:none" 
+     d="M 8 4 L 8 6 L 6.5800781 6 C 4.4324271 6 3 6.7511 3 9 C 3 11.3399 6 12 6 12 C 6 12 4.3097549 10.552231 4.6230469 9.5820312 C 4.8849889 8.7708312 5.960384 8 6.9375 8 L 8 8 L 8 10 L 13 7 L 8 4 z "
+     />
 </svg>
