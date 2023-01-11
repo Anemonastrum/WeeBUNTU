@@ -52,6 +52,7 @@ printf "\n \n Installing Icons"
 ./"$ANEICNS"/install.sh -n AnemonizeICONS
 sleep 1
 printf "\n \n Installing Fonts"
+mkdir ~/.local/share/Fonts/
 cp -r "$ANEFONTS"/* ~/.local/share/Fonts/
 sleep 1
 printf "\n \n Installing Cursors"
@@ -69,7 +70,7 @@ sleep 1
 gnome-extensions enable arcmenu@arcmenu.com
 gnome-extensions enable blur-my-shell@aunetx
 gnome-extensions enable CoverflowAltTab@palatis.blogspot.com
-gnome-extensions enable dash-to-panel@jderose9@github.com
+gnome-extensions enable dash-to-panel@jderose9.github.com
 gnome-extensions enable gsconnect@andyholmes.github.io
 gnome-extensions enable mediacontrols@cliffniff.github.com
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
@@ -77,7 +78,7 @@ gnome-extensions enable ding@rastersoft.com
 gnome-extensions enable ubuntu-appindicators@ubuntu.com
 gnome-extensions enable ubuntu-dock@ubuntu.com
 sleep 1
-dconf load /org/gnome/shell/extensions/< "$ANEEXT"/all_extension_settings.conf
+dconf load /org/gnome/shell/extensions/< "$ANECONF"/all_extension_settings.conf
 sleep 1
 printf "\n \n Applying Addtional Configurations"
 gsettings set org.gnome.desktop.interface gtk-theme AnemonizeTheme-Light-blue
