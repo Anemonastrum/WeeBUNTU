@@ -55,7 +55,7 @@ sudo cp -r "$ANEGTK"/source/* /usr/share/gnome-shell/theme/
 sleep 1
 printf "\n \n Installing Icons"
 #./"$ANEICNS"/install.sh -n AnemonizeICONS
-sudo cp -r "$ANEICNS"/sourcce/* /usr/share/icons/
+sudo cp -r "$ANEICNS"/source/* /usr/share/icons/
 sleep 1
 printf "\n \n Installing Fonts"
 #mkdir ~/.local/share/fonts/
@@ -73,7 +73,6 @@ printf "\n \n Installing GNOME Extensions"
 sudo cp -r "$ANEEXT"/* /usr/share/gnome-shell/extensions/
 sleep 1
 printf "\n \n Applying Configurations"
-sudo systemctl restart gdm
 sleep 1
 gnome-extensions enable arcmenu@arcmenu.com
 gnome-extensions enable blur-my-shell@aunetx
