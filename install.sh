@@ -50,7 +50,7 @@ sleep 1
 clear
 anemonabanner
 printf "\n \n Installing GTK Themes"
-#./"$ANEGTK/install.sh" -n AnemonizeTheme -t blue -c Light -o normal -i ubuntu -m --round -s 260
+./"$ANEGTK/install.sh" -n AnemonizeTheme -t blue -c Light -o normal -i ubuntu -m --round -s 260
 sudo cp -r "$ANEGTK"/source/* /usr/share/gnome-shell/theme/
 sleep 1
 printf "\n \n Installing Icons"

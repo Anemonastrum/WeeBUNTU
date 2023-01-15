@@ -2,22 +2,30 @@
 - Ubuntu 22.04.1 Jammy [Link](http://releases.ubuntu.com/jammy/)
 
 ## Sources
-- GTK THEME [Source](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+- GTK Theme [Source](https://github.com/vinceliuice/WhiteSur-gtk-theme)
+- Icons Theme [Source](https://github.com/yeyushengfan258/Reversal-icon-theme)
 - Cursors [Source](https://github.com/vinceliuice/Vimix-cursors)
 - GNOME Extensions User Themes, ArcMenu, Blur my Shell, Dash to Panel, GSConnect, Media-Controls, Coverflow Alt-Tab
 
 ## Features to Add
+- New Fresh Shell Theme
+- New Fresh Icon Theme
+- New Fresh Cursor Theme
+- Brand New Bootanimation
+- Brand New Wallpapers
+- Brand New Logo
+- Snap Store Integrated
 
-## Install pre-requisities
+## Usage
 
-Mengupdate daftar paket:
+UNPACK ISO:
 
-      sudo apt-get update
+      ./unpack.sh
       
-Install QEMU-KVM dan Virtual Machine Manager:
+Chroot:
 
-      sudo apt-get install apparmor apparmor-utils bridge-utils libvirt-clients libvirt-daemon-system libguestfs-tools qemu-kvm virt-manager
+      ./chroot.sh
       
-Install Persyaratan ketat untuk kustomisasi:
+REPACK ISO:
 
-      sudo apt-get install binwalk casper genisoimage live-boot live-boot-initramfs-tools squashfs-tools
+      ./repack.sh
