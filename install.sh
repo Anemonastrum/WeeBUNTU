@@ -45,12 +45,12 @@ printf "\n \n Preparing Resources"
 printf "\n \n Installing Packages"
 clear
 sudo apt update -y
-sudo apt install gnome-tweaks gnome-shell gnome-shell-extensions -y
+sudo apt install gnome-tweaks gnome-shell gnome-shell-extensions sassc libxml2-utils xmllint libglib2.0-dev-bin python3 -y
 sleep 1
 clear
 anemonabanner
 printf "\n \n Installing GTK Themes"
-./"$ANEGTK/install.sh" -n AnemonizeTheme -t blue -c Light -o normal -i ubuntu -m --round -s 260
+./"$ANEGTK/install.sh" -n AnemonizeTheme -t pink -c Light -o normal -m --round -s 280
 sudo cp -r "$ANEGTK"/source/* /usr/share/gnome-shell/theme/
 sleep 1
 printf "\n \n Installing Icons"
