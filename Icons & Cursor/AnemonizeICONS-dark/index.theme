@@ -1,7 +1,7 @@
 [Icon Theme]
-Name=Reversal
+Name=AnemonizeICONS
 Comment=MacOSX style icon theme for linux.
-Inherits=Numix-Circle,Adwaita,hicolor
+Inherits=Yaru,Adwaita,hicolor
 Example=folder
 
 # KDE/Plasma Stuff
