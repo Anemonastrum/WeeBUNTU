@@ -1,8 +1,8 @@
-PRETTY_NAME="WeeBUNTU WIBU"
+PRETTY_NAME="WeeBUNTU Bawang"
 NAME="WeeBUNTU"
 VERSION_ID="420"
-VERSION="WeeBUNTU (wibu Bawling)"
-VERSION_CODENAME=wibu
+VERSION="WeeBUNTU (Bau Bawang)"
+VERSION_CODENAME=bawang
 ID=weebuntu
 ID_LIKE=debian
 HOME_URL="https://www.ubuntu.com/"
