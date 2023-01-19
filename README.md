@@ -19,15 +19,31 @@
 
 ## Usage
 
-UNPACK ISO:
+UNPACK ISO
 
       ./unpack.sh
       
-Chroot:
+Chroot
 
       ./chroot.sh
+
+Inside Chroot Environment
+
+      mount -t proc none /proc
+      mount -t sysfs none /sys
+      mount -t devpts none /dev/pts 
+
+      sudo apt update
+
+      sudo apt install git
+
+      git clone http://github.com/Anemonastrum/RemasterUbuntu/
+
+      cd RemasterUbuntu
+
+      sudo bash ./startremaster.sh
       
-REPACK ISO:
+REPACK ISO
 
       ./repack.sh
 
