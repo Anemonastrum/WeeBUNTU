@@ -19,6 +19,8 @@
 
 ## Usage
 
+!Internet Access is required to run the scripts!
+
 UNPACK ISO
 
       ./unpack.sh
