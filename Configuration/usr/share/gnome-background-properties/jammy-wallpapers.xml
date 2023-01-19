@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+ <wallpaper deleted="false">
+   <name>Ubuntu 22.04 Community Wallpapers</name>
+   <filename>/usr/share/backgrounds/contest/jammy.xml</filename>
+   <options>zoom</options>
+ </wallpaper>
+ <wallpaper>
+     <name>Blue flower</name>
+     <name xml:lang="de">Blaue Blume</name>
+     <name xml:lang="en_GB">Blue flower</name>
+     <name xml:lang="fr">Fleur bleue</name>
+     <name xml:lang="hr">Plavi cvijet</name>
+     <filename>/usr/share/backgrounds/Blue_flower_by_Elena_Stravoravdi.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>canvas</name>
+     <name xml:lang="de">Leinwand</name>
+     <name xml:lang="en_GB">canvas</name>
+     <name xml:lang="fr">canevas</name>
+     <name xml:lang="hr">platno</name>
+     <filename>/usr/share/backgrounds/canvas_by_roytanck.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>Cherry Tree in Lakones</name>
+     <name xml:lang="en_GB">Cherry Tree in Lakones</name>
+     <name xml:lang="hr">Trešnja u Lakonesu</name>
+     <filename>/usr/share/backgrounds/Cherry_Tree_in_Lakones_by_elenastravoravdi.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>DSC2943</name>
+     <name xml:lang="de">DSC2943</name>
+     <name xml:lang="en_GB">DSC2943</name>
+     <name xml:lang="fr">DSC2943</name>
+     <name xml:lang="hr">DSC2943</name>
+     <filename>/usr/share/backgrounds/DSC2943_by_kcpru.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>jj dark</name>
+     <name xml:lang="de">jj dunkel</name>
+     <name xml:lang="en_GB">jj dark</name>
+     <name xml:lang="hr">jj tamno</name>
+     <filename>/usr/share/backgrounds/jj_dark_by_Hiking93.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>jj light</name>
+     <name xml:lang="de">jj hell</name>
+     <name xml:lang="en_GB">jj light</name>
+     <name xml:lang="hr">jj svjetlo</name>
+     <filename>/usr/share/backgrounds/jj_light_by_Hiking93.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>Mirror</name>
+     <name xml:lang="en_GB">Mirror</name>
+     <name xml:lang="fr">Miroir</name>
+     <name xml:lang="hr">Zrcalo</name>
+     <filename>/usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>Optical Fibers in Dark</name>
+     <name xml:lang="de">Lichtwellenleiter in der Dunkelheit</name>
+     <name xml:lang="en_GB">Optical Fibres in Dark</name>
+     <name xml:lang="hr">Optička vlakna u tami</name>
+     <filename>/usr/share/backgrounds/Optical_Fibers_in_Dark_by_Elena_Stravoravdi.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>ubuntu2</name>
+     <name xml:lang="de">ubuntu2</name>
+     <name xml:lang="en_GB">ubuntu2</name>
+     <name xml:lang="fr">ubuntu2</name>
+     <name xml:lang="hr">ubuntu2</name>
+     <filename>/usr/share/backgrounds/ubuntu2_by_arman1992.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+ <wallpaper>
+     <name>ubuntu</name>
+     <name xml:lang="de">ubuntu</name>
+     <name xml:lang="en_GB">ubuntu</name>
+     <name xml:lang="fr">ubuntu</name>
+     <name xml:lang="hr">ubuntu</name>
+     <filename>/usr/share/backgrounds/ubuntu_by_arman1992.jpg</filename>
+     <options>zoom</options>
+     <pcolor>#000000</pcolor>
+     <scolor>#000000</scolor>
+     <shade_type>solid</shade_type>
+ </wallpaper>
+</wallpapers>
