@@ -12,9 +12,6 @@ ANEUBI="Ubiquity"
 codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
 osname=$(cat /etc/os-release | grep '="Ubuntu"' | cut -d = -f 2)
 
-THEMEDIR="/usr/share/themes"
-ICONDIR="/usr/share/icons"
-
 anemonabanner()
 {
   printf "     _    _   _ _____ __  __  ___  _   _    _    
@@ -62,38 +59,39 @@ fi
 
 printf "\n \n Starting to remaster ISO"
 sleep 1
-read -p 'Distro Name: ' DISNAME
+read -p ' \n Distro Name: \n ' DISNAME
+sleep 1
 printf "\n \n Preparing Resources"
 sudo apt update -y
-sudo apt install sassc libxml2-utils libawadita libglib2.0-dev-bin imagemagick dialog -y
+sudo apt install sassc libxml2-utils libglib2.0-dev-bin imagemagick dialog -y
 sleep 1
 clear
 anemonabanner
 printf "\n \n Removing trash apps \n \n"
-sudo apt remove gnome-shell-extension-ubuntu-dock
+sudo apt remove gnome-shell-extension-ubuntu-dock -y
 sudo apt update -y
-sudo apt install plank
+sudo apt install plank -y
 sleep 1
 clear
 anemonabanner
 printf "\n \n Configuring Themes \n \n"
-sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C "$THEMEDIR"/
-sudo mv "$THEMEDIR"/WhiteSur-Light "$THEMEDIR"/Anemonize
-sudo cp -r "$THEMEDIR"/Anemonize/* "$THEMEDIR"/Yaru/
-sudo cp -r "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C /usr/share/themes/
+sudo mv /usr/share/themes/WhiteSur-Light /usr/share/themes/Anemonize
+sudo cp -r /usr/share/themes/Anemonize/* /usr/share/themes/Yaru/
+sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
 sleep 1
-sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C "$THEMEDIR"/
-sudo mv "$THEMEDIR"/WhiteSur-Dark "$THEMEDIR"/Anemonize-dark
-sudo cp -r "$THEMEDIR"/Anemonize-dark/* "$THEMEDIR"/Yaru-dark/
-sudo cp -r "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
+sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C /usr/share/themes/
+sudo mv /usr/share/themes/WhiteSur-Dark /usr/share/themes/Anemonize-dark
+sudo cp -r /usr/share/themes/Anemonize-dark/* /usr/share/themes/Yaru-dark/
+sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Icons \n \n"
-sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C "$ICONDIR"/
-sudo cp -r "$ICONDIR"/Marwaita/* /usr/share/icon/Yaru/
+sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C /usr/share/icons/
+sudo cp -r /usr/share/icons/Marwaita/* /usr/share/icon/Yaru/
 sleep 1
 printf "\n \n Configuring Cursor \n \n"
-sudo cp -r "$ANEICONS"/cursor "$ICONDIR"/Yaru/
-sudo cp -r "$ANEICONS"/cursor.theme "$ICONDIR"/Yaru/
+sudo cp -r "$ANEICONS"/cursor /usr/share/icons/Yaru/
+sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru/
 sleep 1
 printf "\n \n Configuring Background \n \n"
 sudo cp -r "$ANEBACK"/* /usr/share/backgrounds/
@@ -115,7 +113,7 @@ sleep 1
 printf "\n \n Changing default themes and icons \n \n"
 sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
-printf "\n \n Adding WeeBUNTU Scripts \n \n"
+printf "\n \n Adding '$DISNAME' Scripts \n \n"
 sudo cp -r "$ANECONF"/etc/profiles.d/* /etc/profiles.d/
 chmod +x /etc/profiles.d/gantibg.sh
 chmod +x /etc/profiles.d/weebuntu.sh
@@ -134,18 +132,15 @@ chmod +x /usr/bin/gd-bg
 sleep 1
 printf "\n \n Adding '$DISNAME' configuration  \n \n"
 sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
-sudo cp -r "$ANECONF""$ICONDIR"/* "$ICONDIR"/
+sudo cp -r "$ANECONF"/usr/share/icons/* /usr/share/icons/
 sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
 sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
 sleep 1
-printf "\n \n Adding '$DISNAME' Apps  \n \n"
 sudo snap install spotify
 sudo snap install discord
 sudo apt install vlc
 sudo apt install python3
 sudo apt install ubuntu-restricted-extras
-
-
 printf "\n \n Done  \n \n"
