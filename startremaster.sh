@@ -12,10 +12,6 @@ ANEUBI="Ubiquity"
 codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
 osname=$(cat /etc/os-release | grep '="Ubuntu"' | cut -d = -f 2)
 
-ANEAPT="sudo apt install"
-ANESNP="sudo snap install"
-KOPI="sudo cp -r"
-
 THEMEDIR="/usr/share/themes"
 ICONDIR="/usr/share/icons"
 
@@ -69,87 +65,87 @@ sleep 1
 read -p 'Distro Name: ' DISNAME
 printf "\n \n Preparing Resources"
 sudo apt update -y
-"$ANEAPT" sassc libxml2-utils libawadita libglib2.0-dev-bin imagemagick dialog -y
+sudo apt install sassc libxml2-utils libawadita libglib2.0-dev-bin imagemagick dialog -y
 sleep 1
 clear
 anemonabanner
 printf "\n \n Removing trash apps \n \n"
 sudo apt remove gnome-shell-extension-ubuntu-dock
 sudo apt update -y
-"$ANEAPT" plank
+sudo apt install plank
 sleep 1
 clear
 anemonabanner
 printf "\n \n Configuring Themes \n \n"
 sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C "$THEMEDIR"/
 sudo mv "$THEMEDIR"/WhiteSur-Light "$THEMEDIR"/Anemonize
-"$KOPI" "$THEMEDIR"/Anemonize/* "$THEMEDIR"/Yaru/
-"$KOPI" "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo cp -r "$THEMEDIR"/Anemonize/* "$THEMEDIR"/Yaru/
+sudo cp -r "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
 sleep 1
 sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C "$THEMEDIR"/
 sudo mv "$THEMEDIR"/WhiteSur-Dark "$THEMEDIR"/Anemonize-dark
-"$KOPI" "$THEMEDIR"/Anemonize-dark/* "$THEMEDIR"/Yaru-dark/
-"$KOPI" "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
+sudo cp -r "$THEMEDIR"/Anemonize-dark/* "$THEMEDIR"/Yaru-dark/
+sudo cp -r "$THEMEDIR"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Icons \n \n"
 sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C "$ICONDIR"/
-"$KOPI" "$ICONDIR"/Marwaita/* /usr/share/icon/Yaru/
+sudo cp -r "$ICONDIR"/Marwaita/* /usr/share/icon/Yaru/
 sleep 1
 printf "\n \n Configuring Cursor \n \n"
-"$KOPI" "$ANEICONS"/cursor "$ICONDIR"/Yaru/
-"$KOPI" "$ANEICONS"/cursor.theme "$ICONDIR"/Yaru/
+sudo cp -r "$ANEICONS"/cursor "$ICONDIR"/Yaru/
+sudo cp -r "$ANEICONS"/cursor.theme "$ICONDIR"/Yaru/
 sleep 1
 printf "\n \n Configuring Background \n \n"
-"$KOPI" "$ANEBACK"/* /usr/share/backgrounds/
+sudo cp -r "$ANEBACK"/* /usr/share/backgrounds/
 sleep 1
 printf "\n \n Configuring Fonts \n \n"
-"$KOPI" "$ANEFONT"/* /usr/share/fonts/truetype/ubuntu/
+sudo cp -r "$ANEFONT"/* /usr/share/fonts/truetype/ubuntu/
 sleep 1
 printf "\n \n Configuring Bootanimations \n \n"
-"$KOPI" "$ANEPLY"/* /usr/share/plymouth/
+sudo cp -r "$ANEPLY"/* /usr/share/plymouth/
 sleep 1
 printf "\n \n Configuring Addtional Configuration \n \n"
 sleep 1
 printf "\n \n Activating Skel \n \n"
-"$KOPI" "$ANECONF"/etc/default/useradd /etc/default/
+sudo cp -r "$ANECONF"/etc/default/useradd /etc/default/
 sleep 1
 printf "\n \n Disabling Wayland & Activating X11 \n \n"
-"$KOPI" "$ANECONF"/etc/gdm3/* /etc/gdm3/
+sudo cp -r "$ANECONF"/etc/gdm3/* /etc/gdm3/
 sleep 1
 printf "\n \n Changing default themes and icons \n \n"
-"$KOPI" "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
+sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
 printf "\n \n Adding WeeBUNTU Scripts \n \n"
-"$KOPI" "$ANECONF"/etc/profiles.d/* /etc/profiles.d/
+sudo cp -r "$ANECONF"/etc/profiles.d/* /etc/profiles.d/
 chmod +x /etc/profiles.d/gantibg.sh
 chmod +x /etc/profiles.d/weebuntu.sh
 sleep 1
-"$KOPI" "$ANECONF"/etc/lsb-release /etc/
+sudo cp -r "$ANECONF"/etc/lsb-release /etc/
 printf "\n \n Adding Skel configuration \n \n"
 sudo mkdir /etc/skel/.config
 sudo mkdir /etc/skel/.local
-"$KOPI" "$ANECONF"/skel/dotconfig/* /etc/skel/.config/
-"$KOPI" "$ANECONF"/skel/dotlocal/* /etc/skel/.local/
+sudo cp -r "$ANECONF"/skel/dotconfig/* /etc/skel/.config/
+sudo cp -r "$ANECONF"/skel/dotlocal/* /etc/skel/.local/
 sleep 1
 printf "\n \n Adding usr configuration  \n \n"
-"$KOPI" "$ANECONF"/usr/lib/os-release /usr/lib/
-"$KOPI" "$ANECONF"/usr/bin/gd-bg /usr/bin/
+sudo cp -r "$ANECONF"/usr/lib/os-release /usr/lib/
+sudo cp -r "$ANECONF"/usr/bin/gd-bg /usr/bin/
 chmod +x /usr/bin/gd-bg
 sleep 1
 printf "\n \n Adding '$DISNAME' configuration  \n \n"
-"$KOPI" "$ANECONF"/usr/share/anemona /usr/share/
-"$KOPI" "$ANECONF""$ICONDIR"/* "$ICONDIR"/
-"$KOPI" "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
-"$KOPI" "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
-"$KOPI" "$ANECONF"/usr/share/plank /usr/share/
-"$KOPI" "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
+sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
+sudo cp -r "$ANECONF""$ICONDIR"/* "$ICONDIR"/
+sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
+sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
+sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
+sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
 sleep 1
 printf "\n \n Adding '$DISNAME' Apps  \n \n"
-"$ANESNP" spotify
-"$ANESNP" discord
-"$ANEAPT" vlc
-"$ANEAPT" python3
-"$ANEAPT" ubuntu-restricted-extras
+sudo snap install spotify
+sudo snap install discord
+sudo apt install vlc
+sudo apt install python3
+sudo apt install ubuntu-restricted-extras
 
 
 printf "\n \n Done  \n \n"
