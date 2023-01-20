@@ -3,7 +3,7 @@
 #Variable
 ANEBACK="Background"
 ANECONF="Configuration"
-ANEFONT="Font"
+ANEFONT="Fonts"
 ANETHEME="GTK Theme"
 ANEICONS="Icons & Cursor"
 ANEPLY="Plymouth"
@@ -87,10 +87,10 @@ sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/them
 sleep 1
 printf "\n \n Configuring Icons \n \n"
 sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C /usr/share/icons/
-sudo cp -r /usr/share/icons/Marwaita/* /usr/share/icon/Yaru/
+sudo cp -r /usr/share/icons/Marwaita/* /usr/share/icons/Yaru/
 sleep 1
 printf "\n \n Configuring Cursor \n \n"
-sudo cp -r "$ANEICONS"/cursor /usr/share/icons/Yaru/
+sudo cp -r "$ANEICONS"/cursors /usr/share/icons/Yaru/
 sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru/
 sleep 1
 printf "\n \n Configuring Background \n \n"
@@ -114,9 +114,9 @@ printf "\n \n Changing default themes and icons \n \n"
 sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
 printf "\n \n Adding '$DISNAME' Scripts \n \n"
-sudo cp -r "$ANECONF"/etc/profiles.d/* /etc/profiles.d/
-chmod +x /etc/profiles.d/gantibg.sh
-chmod +x /etc/profiles.d/weebuntu.sh
+sudo cp -r "$ANECONF"/etc/profiles.d/* /etc/profile.d/
+chmod +x /etc/profile.d/gantibg.sh
+chmod +x /etc/profile.d/weebuntu.sh
 sleep 1
 sudo cp -r "$ANECONF"/etc/lsb-release /etc/
 printf "\n \n Adding Skel configuration \n \n"
