@@ -121,6 +121,8 @@ printf "\n \n Changing default themes and icons \n \n"
 sleep 1
 printf "\n \n Adding WeeBUNTU Scripts \n \n"
 "$KOPI" "$ANECONF"/etc/profiles.d/* /etc/profiles.d/
+chmod +x /etc/profiles.d/gantibg.sh
+chmod +x /etc/profiles.d/weebuntu.sh
 sleep 1
 "$KOPI" "$ANECONF"/etc/lsb-release /etc/
 printf "\n \n Adding Skel configuration \n \n"
@@ -131,6 +133,8 @@ sudo mkdir /etc/skel/.local
 sleep 1
 printf "\n \n Adding usr configuration  \n \n"
 "$KOPI" "$ANECONF"/usr/lib/os-release /usr/lib/
+"$KOPI" "$ANECONF"/usr/bin/gd-bg /usr/bin/
+chmod +x /usr/bin/gd-bg
 sleep 1
 printf "\n \n Adding '$DISNAME' configuration  \n \n"
 "$KOPI" "$ANECONF"/usr/share/anemona /usr/share/
