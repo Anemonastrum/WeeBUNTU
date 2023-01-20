@@ -9,6 +9,9 @@ ANEICONS="Icons & Cursor"
 ANEPLY="Plymouth"
 ANEUBI="Ubiquity"
 
+codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
+osname=$(cat /etc/os-release | grep '="Ubuntu"' | cut -d = -f 2)
+
 anemonabanner()
 {
   printf "     _    _   _ _____ __  __  ___  _   _    _    
@@ -37,18 +40,41 @@ progress()
 
 anemonabanner
 sleep 1
-printf "\n \n Memulai remastering ISO"
+printf "\n \n Checking Environment"
+
+if [ "$codename" == "focal" ]  || [ "$codename" == "hirsute" ] && [ "$osname" == '"Ubuntu"' ]; then
+  PKGM="apt"
+
+elif [ "$codename" == "impish" ] || [ "$codename" == "jammy" ] || [ "$codename" == "kinetic" ] && [ "$osname" == '"Ubuntu"' ]; then
+  PKGM="apt"
+
+else
+  echo -e "
+------------------------------------------------------------------
+Sorry, This Script is only for Ubuntu Distro
+------------------------------------------------------------------
+"
+  exit 1
+fi
+
+printf "\n \n Starting to remaster ISO"
 sleep 1
 printf "\n \n Preparing Resources"
 sudo apt update -y
-sudo apt install sassc libxml2-utils libawadita libglib2.0-dev-bin imagemagick dialog
+sudo apt install sassc libxml2-utils libawadita libglib2.0-dev-bin imagemagick dialog -y
 sleep 1
 clear
 anemonabanner
 printf "\n \n Configuring Themes \n \n"
 sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C /usr/share/themes/
-sudo cp -r /usr/share/themes/WhiteSur-Light/* /usr/share/themes/Yaru/
-sudo cp -r /usr/share/themes/WhiteSur-Light/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo mv /usr/share/themes/WhiteSur-Light /usr/share/themes/Anemonize
+sudo cp -r /usr/share/themes/Anemonize/* /usr/share/themes/Yaru/
+sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sleep 1
+sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C /usr/share/themes/
+sudo mv /usr/share/themes/WhiteSur-Dark /usr/share/themes/Anemonize-dark
+sudo cp -r /usr/share/themes/Anemonize-dark/* /usr/share/themes/Yaru-dark/
+sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Icons \n \n"
 sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C /usr/share/icons/
