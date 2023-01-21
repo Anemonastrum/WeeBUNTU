@@ -57,9 +57,9 @@ Sorry, This Script is only for Ubuntu Distro
   exit 1
 fi
 
-printf "\n \n Starting to remaster ISO"
+printf "\n \n Starting to remaster ISO \n \n"
 sleep 1
-read -p ' \n Distro Name: \n ' DISNAME
+read -p 'Distro Name: ' DISNAME
 sleep 1
 printf "\n \n Preparing Resources"
 sudo apt update -y
@@ -114,7 +114,7 @@ printf "\n \n Changing default themes and icons \n \n"
 sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
 printf "\n \n Adding '$DISNAME' Scripts \n \n"
-sudo cp -r "$ANECONF"/etc/profiles.d/* /etc/profile.d/
+sudo cp -r "$ANECONF"/etc/profile.d/* /etc/profile.d/
 chmod +x /etc/profile.d/gantibg.sh
 chmod +x /etc/profile.d/weebuntu.sh
 sleep 1
