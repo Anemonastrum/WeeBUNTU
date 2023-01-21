@@ -8,6 +8,7 @@ ANETHEME="GTK Theme"
 ANEICONS="Icons & Cursor"
 ANEPLY="Plymouth"
 ANEUBI="Ubiquity"
+ANESOU="Sounds"
 
 codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
 osname=$(cat /etc/os-release | grep '="Ubuntu"' | cut -d = -f 2)
@@ -88,16 +89,26 @@ sleep 1
 printf "\n \n Configuring Icons \n \n"
 sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C /usr/share/icons/
 sudo cp -r /usr/share/icons/Marwaita/* /usr/share/icons/Yaru/
+sudo tar -xf "$ANEICONS"/Reversal.tar.xz -C /usr/share/icons/
+sudo cp -r /usr/share/icons/Reversal-pink/* /usr/share/icons/Yaru/
+sudo cp -r /usr/share/icons/Reversal-pink-dark/* /usr/share/icons/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Cursor \n \n"
 sudo cp -r "$ANEICONS"/cursors /usr/share/icons/Yaru/
 sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru/
+sudo cp -r "$ANEICONS"/cursors /usr/share/icons/Yaru-dark/
+sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru-dark/
 sleep 1
+printf "\n \n Configuring Ubiquity Insaller \n \n"
+sudo cp -r "$ANEUBI"/ubiquity-slideshow/* /usr/share/ubiquity-slideshow/
 printf "\n \n Configuring Background \n \n"
 sudo cp -r "$ANEBACK"/* /usr/share/backgrounds/
 sleep 1
 printf "\n \n Configuring Fonts \n \n"
 sudo cp -r "$ANEFONT"/* /usr/share/fonts/truetype/ubuntu/
+sleep 1
+printf "\n \n Configuring Sounds \n \n"
+sudo cp -r "$ANESOU"/* /usr/share/sounds/ubuntu/stereo/
 sleep 1
 printf "\n \n Configuring Bootanimations \n \n"
 sudo cp -r "$ANEPLY"/* /usr/share/plymouth/
@@ -115,20 +126,19 @@ sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
 printf "\n \n Adding '$DISNAME' Scripts \n \n"
 sudo cp -r "$ANECONF"/etc/profile.d/* /etc/profile.d/
-chmod +x /etc/profile.d/gantibg.sh
 chmod +x /etc/profile.d/weebuntu.sh
 sleep 1
 sudo cp -r "$ANECONF"/etc/lsb-release /etc/
 printf "\n \n Adding Skel configuration \n \n"
 sudo mkdir /etc/skel/.config
 sudo mkdir /etc/skel/.local
+sudo mkdir /etc/skel/Desktop
 sudo cp -r "$ANECONF"/skel/dotconfig/* /etc/skel/.config/
 sudo cp -r "$ANECONF"/skel/dotlocal/* /etc/skel/.local/
+sudo cp -r "$ANECONF"/skel/Desktop/* /etc/skel/Desktop/
 sleep 1
 printf "\n \n Adding usr configuration  \n \n"
 sudo cp -r "$ANECONF"/usr/lib/os-release /usr/lib/
-sudo cp -r "$ANECONF"/usr/bin/gd-bg /usr/bin/
-chmod +x /usr/bin/gd-bg
 sleep 1
 printf "\n \n Adding '$DISNAME' configuration  \n \n"
 sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
