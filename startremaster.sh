@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-#Variable
+#WORKFOLDER
 ANEBACK="Background"
 ANECONF="Configuration"
 ANEFONT="Fonts"
@@ -9,6 +9,24 @@ ANEICONS="Icons & Cursor"
 ANEPLY="Plymouth"
 ANEUBI="Ubiquity"
 ANESOU="Sounds"
+
+#PATH
+
+THEMES="/usr/share/themes"
+ICONS="/usr/share/icons"
+
+#COLOR
+
+BLUE="Yaru-blue"
+BARK="Yaru-bark"
+MAGNETA="Yaru-magneta"
+OLIVE="Yaru-olive"
+PURR="Yaru-purssiangreen"
+PURPLE="Yaru-purple"
+RED="Yaru-red"
+SAGE="Yaru-sage"
+VIRI="Yaru-viridian"
+
 
 codename=$(cat /etc/os-release | grep UBUNTU_CODENAME | cut -d = -f 2)
 osname=$(cat /etc/os-release | grep '="Ubuntu"' | cut -d = -f 2)
@@ -76,28 +94,103 @@ sleep 1
 clear
 anemonabanner
 printf "\n \n Configuring Themes \n \n"
-sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C /usr/share/themes/
-sudo mv /usr/share/themes/WhiteSur-Light /usr/share/themes/Anemonize
-sudo cp -r /usr/share/themes/Anemonize/* /usr/share/themes/Yaru/
-sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C "$THEMES"/
+sudo mv "$THEMES"/WhiteSur-Light "$THEMES"/Anemonize
+sudo cp -r "$THEMES"/Anemonize/* "$THEMES"/Yaru/
+sudo cp -r "$THEMES"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
 sleep 1
-sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C /usr/share/themes/
-sudo mv /usr/share/themes/WhiteSur-Dark /usr/share/themes/Anemonize-dark
-sudo cp -r /usr/share/themes/Anemonize-dark/* /usr/share/themes/Yaru-dark/
-sudo cp -r /usr/share/themes/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
+sudo tar -xf "$ANETHEME"/WhiteSur-Dark.tar.xz -C "$THEMES"/
+sudo mv "$THEMES"/WhiteSur-Dark "$THEMES"/Anemonize-dark
+sudo cp -r "$THEMES"/Anemonize-dark/* "$THEMES"/Yaru-dark/
+sudo cp -r "$THEMES"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
+
+printf "\n \n Patching Theme Accents \n \n"
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$BARK"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$BARK"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$BARK"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$BLUE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$BLUE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$BLUE"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$MAGNETA"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$MAGNETA"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$MAGNETA"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$OLIVE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$OLIVE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$OLIVE"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$PURR"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$PURR"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$PURR"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$RED"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$RED"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$RED"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$SAGE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$SAGE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$SAGE"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$PURPLE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$PURPLE"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$PURPLE"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$VIRI"/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$VIRI"/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$VIRI"/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$BARK"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$BARK"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$BARK"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$BLUE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$BLUE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$BLUE"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$MAGNETA"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$MAGNETA"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$MAGNETA"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$OLIVE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$OLIVE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$OLIVE"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$PURR"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$PURR"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$PURR"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$RED"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$RED"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$RED"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$SAGE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$SAGE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$SAGE"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$PURPLE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$PURPLE"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$PURPLE"-dark/
+
+sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$VIRI"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$VIRI"-dark/
+sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$VIRI"-dark/
+
 printf "\n \n Configuring Icons \n \n"
-sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C /usr/share/icons/
-sudo cp -r /usr/share/icons/Marwaita/* /usr/share/icons/Yaru/
-sudo tar -xf "$ANEICONS"/Reversal.tar.xz -C /usr/share/icons/
-sudo cp -r /usr/share/icons/Reversal-pink/* /usr/share/icons/Yaru/
-sudo cp -r /usr/share/icons/Reversal-pink-dark/* /usr/share/icons/Yaru-dark/
+sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C "$ICONS"/
+sudo cp -r "$ICONS"/Marwaita/* "$ICONS"/Yaru/
+sudo tar -xf "$ANEICONS"/Reversal.tar.xz -C "$ICONS"/
+sudo cp -r "$ICONS"/Reversal-pink/* "$ICONS"/Yaru/
+sudo cp -r "$ICONS"/Reversal-pink-dark/* "$ICONS"/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Cursor \n \n"
-sudo cp -r "$ANEICONS"/cursors /usr/share/icons/Yaru/
-sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru/
-sudo cp -r "$ANEICONS"/cursors /usr/share/icons/Yaru-dark/
-sudo cp -r "$ANEICONS"/cursor.theme /usr/share/icons/Yaru-dark/
+sudo cp -r "$ANEICONS"/cursors "$ICONS"/Yaru/
+sudo cp -r "$ANEICONS"/cursor.theme "$ICONS"/Yaru/
+sudo cp -r "$ANEICONS"/cursors "$ICONS"/Yaru-dark/
+sudo cp -r "$ANEICONS"/cursor.theme "$ICONS"/Yaru-dark/
 sleep 1
 printf "\n \n Configuring Ubiquity Insaller \n \n"
 sudo cp -r "$ANEUBI"/ubiquity-slideshow/* /usr/share/ubiquity-slideshow/
@@ -148,6 +241,8 @@ sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
 sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
 sleep 1
+sudo snap remove firefox
+sudo snap intall chromium
 sudo snap install code
 sudo snap install spotify
 sudo snap install discord
