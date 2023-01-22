@@ -240,8 +240,8 @@ sleep 1
 printf "\n Adding MORE '$DISNAME' configuration \n"
 sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
 sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Yaru/
-sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Reversal-pink/
-sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Reversal-pink-dark/
+sudo cp -r "$ANECONF"/usr/share/icons/Yaru/256x256/apps/* /usr/share/icons/Reversal-pink/apps/scalable/
+sudo cp -r "$ANECONF"/usr/share/icons/Yaru/256x256/apps* /usr/share/icons/Reversal-pink-dark/apps/scalable/
 sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
@@ -251,7 +251,6 @@ sudo apt install xdotool -y
 sudo apt install vlc -y
 sudo apt install python3 -y
 sudo apt install ubuntu-restricted-extras -y
-sudo apt install gnome-shell-extensions -y
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 wget https://dl.discordapp.net/apps/linux/0.0.24/discord-0.0.24.deb
