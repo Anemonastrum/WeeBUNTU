@@ -2,8 +2,6 @@
 Name=Welcome to WeeBUNTU
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=distributor-logo
-#TryExec=/usr/libexec/gnome-initial-setup
-#Exec=/usr/libexec/gnome-initial-setup
 Terminal=false
 Type=Application
 StartupNotify=true

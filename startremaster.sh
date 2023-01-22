@@ -243,7 +243,7 @@ sudo cp -r "$ANECONF"/usr/share/icons/* /usr/share/icons/
 sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
-sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
+sudo cp -r "$ANECONF"/usr/share/ubuntu/* /usr/share/ubuntu/
 sleep 1
 sudo snap install chromium
 sudo snap install spotify
