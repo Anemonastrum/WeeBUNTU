@@ -103,11 +103,11 @@ sudo cp -r "$THEMES"/Anemonize-dark/* "$THEMES"/Yaru-dark/
 sudo cp -r "$THEMES"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
 
-sudo cp -r "$THEMES"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
-sudo cp -r "$THEMES"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
+sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 
-sudo cp -r "$THEMES"/gnome-shell/modes/* /usr/share/gnome-shell/modes/
-sudo cp -r "$THEMES"/gnome-shell/ext/* /usr/share/gnome-shell/extensions/
+sudo cp -r "$ANETHEME"/gnome-shell/modes/* /usr/share/gnome-shell/modes/
+sudo cp -r "$ANETHEME"/gnome-shell/ext/* /usr/share/gnome-shell/extensions/
 
 printf "\n Patching Theme Accents \n"
 
@@ -245,8 +245,7 @@ sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
 sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
 sleep 1
-sudo snap remove firefox
-sudo snap intall chromium
+sudo snap install chromium
 sudo snap install spotify
 sudo snap install discord
 sudo apt install vlc
