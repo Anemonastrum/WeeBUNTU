@@ -9,13 +9,15 @@
 - Cursors [Source](https://github.com/vinceliuice/Vimix-cursors)
 
 ## Features to Add
-- New Fresh Shell Theme
-- New Fresh Icon Theme
-- New Fresh Cursor Theme
-- Brand New Bootanimation
+- New System Theme
+- New Icon Theme
+- New Cursor Theme
+- New Original Sounds Theme
+- Brand Boot Logo
 - Brand New Wallpapers
 - Brand New Logo
-- Snap Store Integrated
+- Brand New Dock
+- Prebuilt apps added (Spotify, Discord, VLC, Chromium, VSCode)
 
 ## Usage
 
@@ -23,11 +25,11 @@
 
 UNPACK ISO
 
-      ./unpack.sh
+      bash unpack.sh
       
 Chroot
 
-      ./chroot.sh
+      bash chroot.sh
 
 Inside Chroot Environment
 
@@ -43,11 +45,11 @@ Inside Chroot Environment
 
       cd RemasterUbuntu
 
-      sudo bash ./startremaster.sh
+      sudo bash startremaster.sh
       
 REPACK ISO
 
-      ./repack.sh
+      bash repack.sh
 
 ## References
 

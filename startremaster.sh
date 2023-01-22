@@ -11,12 +11,10 @@ ANEUBI="Ubiquity"
 ANESOU="Sounds"
 
 #PATH
-
 THEMES="/usr/share/themes"
 ICONS="/usr/share/icons"
 
 #COLOR
-
 BLUE="Yaru-blue"
 BARK="Yaru-bark"
 MAGNETA="Yaru-magneta"
@@ -80,20 +78,20 @@ printf "\n \n Starting to remaster ISO \n \n"
 sleep 1
 read -p 'Distro Name: ' DISNAME
 sleep 1
-printf "\n \n Preparing Resources"
+printf "\n Preparing Resources"
 sudo apt update -y
 sudo apt install sassc libxml2-utils libglib2.0-dev-bin imagemagick dialog -y
 sleep 1
 clear
 anemonabanner
-printf "\n \n Removing trash apps \n \n"
+printf "\n Removing trash apps \n"
 sudo apt remove gnome-shell-extension-ubuntu-dock -y
 sudo apt update -y
 sudo apt install plank -y
 sleep 1
 clear
 anemonabanner
-printf "\n \n Configuring Themes \n \n"
+printf "\n Configuring Themes \n"
 sudo tar -xf "$ANETHEME"/WhiteSur-Light.tar.xz -C "$THEMES"/
 sudo mv "$THEMES"/WhiteSur-Light "$THEMES"/Anemonize
 sudo cp -r "$THEMES"/Anemonize/* "$THEMES"/Yaru/
@@ -105,7 +103,13 @@ sudo cp -r "$THEMES"/Anemonize-dark/* "$THEMES"/Yaru-dark/
 sudo cp -r "$THEMES"/Anemonize/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 sleep 1
 
-printf "\n \n Patching Theme Accents \n \n"
+sudo cp -r "$THEMES"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
+sudo cp -r "$THEMES"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
+
+sudo cp -r "$THEMES"/gnome-shell/modes/* /usr/share/gnome-shell/modes/
+sudo cp -r "$THEMES"/gnome-shell/ext/* /usr/share/gnome-shell/extensions/
+
+printf "\n Patching Theme Accents \n"
 
 sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$BARK"/
 sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$BARK"/
@@ -179,42 +183,42 @@ sudo cp -r "$THEMES"/Anemonize/gtk-2.0 "$THEMES"/"$VIRI"-dark/
 sudo cp -r "$THEMES"/Anemonize/gtk-3.0 "$THEMES"/"$VIRI"-dark/
 sudo cp -r "$THEMES"/Anemonize/gtk-4.0 "$THEMES"/"$VIRI"-dark/
 
-printf "\n \n Configuring Icons \n \n"
+printf "\n Configuring Icons \n"
 sudo tar -xf "$ANEICONS"/Marwaita.tar.xz -C "$ICONS"/
 sudo cp -r "$ICONS"/Marwaita/* "$ICONS"/Yaru/
 sudo tar -xf "$ANEICONS"/Reversal.tar.xz -C "$ICONS"/
 sudo cp -r "$ICONS"/Reversal-pink/* "$ICONS"/Yaru/
 sudo cp -r "$ICONS"/Reversal-pink-dark/* "$ICONS"/Yaru-dark/
 sleep 1
-printf "\n \n Configuring Cursor \n \n"
-sudo cp -r "$ANEICONS"/cursors "$ICONS"/Yaru/
+printf "\n Configuring Cursor \n"
+sudo cp -r "$ANEICONS"/cursors/* "$ICONS"/Yaru/cursors/
 sudo cp -r "$ANEICONS"/cursor.theme "$ICONS"/Yaru/
-sudo cp -r "$ANEICONS"/cursors "$ICONS"/Yaru-dark/
+sudo cp -r "$ANEICONS"/cursors/* "$ICONS"/Yaru-dark/cursors/
 sudo cp -r "$ANEICONS"/cursor.theme "$ICONS"/Yaru-dark/
 sleep 1
-printf "\n \n Configuring Ubiquity Insaller \n \n"
+printf "\n Configuring Ubiquity Insaller \n"
 sudo cp -r "$ANEUBI"/ubiquity-slideshow/* /usr/share/ubiquity-slideshow/
-printf "\n \n Configuring Background \n \n"
+printf "\n Configuring Background \n"
 sudo cp -r "$ANEBACK"/* /usr/share/backgrounds/
 sleep 1
-printf "\n \n Configuring Fonts \n \n"
+printf "\n Configuring Fonts \n"
 sudo cp -r "$ANEFONT"/* /usr/share/fonts/truetype/ubuntu/
 sleep 1
-printf "\n \n Configuring Sounds \n \n"
+printf "\n Configuring Sounds \n"
 sudo cp -r "$ANESOU"/* /usr/share/sounds/ubuntu/stereo/
 sleep 1
-printf "\n \n Configuring Bootanimations \n \n"
+printf "\n Configuring Bootanimation \n"
 sudo cp -r "$ANEPLY"/* /usr/share/plymouth/
 sleep 1
-printf "\n \n Configuring Addtional Configuration \n \n"
+printf "\n Configuring Addtional Configuration \n"
 sleep 1
-printf "\n \n Activating Skel \n \n"
+printf "\n Activating Skel \n"
 sudo cp -r "$ANECONF"/etc/default/useradd /etc/default/
 sleep 1
-printf "\n \n Disabling Wayland & Activating X11 \n \n"
+printf "\n Disabling Wayland & Activating X11 \n"
 sudo cp -r "$ANECONF"/etc/gdm3/* /etc/gdm3/
 sleep 1
-printf "\n \n Changing default themes and icons \n \n"
+printf "\n Changing default themes and icons \n"
 sudo cp -r "$ANECONF"/etc/gtk-3.0/* /etc/gtk-3.0/
 sleep 1
 printf "\n \n Adding '$DISNAME' Scripts \n \n"
@@ -222,7 +226,7 @@ sudo cp -r "$ANECONF"/etc/profile.d/* /etc/profile.d/
 chmod +x /etc/profile.d/weebuntu.sh
 sleep 1
 sudo cp -r "$ANECONF"/etc/lsb-release /etc/
-printf "\n \n Adding Skel configuration \n \n"
+printf "\n Adding Skel configuration  \n"
 sudo mkdir /etc/skel/.config
 sudo mkdir /etc/skel/.local
 sudo mkdir /etc/skel/Desktop
@@ -230,10 +234,10 @@ sudo cp -r "$ANECONF"/skel/dotconfig/* /etc/skel/.config/
 sudo cp -r "$ANECONF"/skel/dotlocal/* /etc/skel/.local/
 sudo cp -r "$ANECONF"/skel/Desktop/* /etc/skel/Desktop/
 sleep 1
-printf "\n \n Adding usr configuration  \n \n"
+printf "\n Adding usr configuration  \n"
 sudo cp -r "$ANECONF"/usr/lib/os-release /usr/lib/
 sleep 1
-printf "\n \n Adding '$DISNAME' configuration  \n \n"
+printf "\n Adding MORE '$DISNAME' configuration \n"
 sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
 sudo cp -r "$ANECONF"/usr/share/icons/* /usr/share/icons/
 sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
@@ -243,11 +247,9 @@ sudo cp -r "$ANECONF"/usr/share/ubuntu/ /usr/share/ubuntu/
 sleep 1
 sudo snap remove firefox
 sudo snap intall chromium
-sudo snap install code
 sudo snap install spotify
 sudo snap install discord
 sudo apt install vlc
 sudo apt install python3
 sudo apt install ubuntu-restricted-extras
-sudo apt install nodejs
 printf "\n \n Done  \n \n"
