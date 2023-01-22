@@ -106,8 +106,8 @@ sleep 1
 sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
 sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 
-sudo cp -r "$ANETHEME"/gnome-shell/modes/* /usr/share/gnome-shell/modes/
-sudo cp -r "$ANETHEME"/gnome-shell/ext/* /usr/share/gnome-shell/extensions/
+sudo cp -r "$ANETHEME"/gnome-shell/extensions/modes/* /usr/share/gnome-shell/modes/
+sudo cp -r "$ANETHEME"/gnome-shell/extensions/ext/* /usr/share/gnome-shell/extensions/
 
 printf "\n Patching Theme Accents \n"
 
@@ -205,7 +205,7 @@ printf "\n Configuring Fonts \n"
 sudo cp -r "$ANEFONT"/* /usr/share/fonts/truetype/ubuntu/
 sleep 1
 printf "\n Configuring Sounds \n"
-sudo cp -r "$ANESOU"/* /usr/share/sounds/ubuntu/stereo/
+sudo cp -r "$ANESOU"/* /usr/share/sounds/Yaru/stereo/
 sleep 1
 printf "\n Configuring Bootanimation \n"
 sudo cp -r "$ANEPLY"/* /usr/share/plymouth/
