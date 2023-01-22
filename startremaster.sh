@@ -106,8 +106,8 @@ sleep 1
 sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru/
 sudo cp -r "$ANETHEME"/gnome-shell/* /usr/share/gnome-shell/theme/Yaru-dark/
 
-sudo cp -r "$ANETHEME"/gnome-shell/extensions/modes/* /usr/share/gnome-shell/modes/
-sudo cp -r "$ANETHEME"/gnome-shell/extensions/ext/* /usr/share/gnome-shell/extensions/
+sudo cp -r "$ANETHEME"/extensions/modes/* /usr/share/gnome-shell/modes/
+sudo cp -r "$ANETHEME"/extensions/ext/* /usr/share/gnome-shell/extensions/
 
 printf "\n Patching Theme Accents \n"
 
