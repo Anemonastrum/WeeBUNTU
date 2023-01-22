@@ -251,4 +251,14 @@ sudo apt install xdotool -y
 sudo apt install vlc -y
 sudo apt install python3 -y
 sudo apt install ubuntu-restricted-extras -y
+sudo apt install gnome-shell-extensions -y
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+wget https://dl.discordapp.net/apps/linux/0.0.24/discord-0.0.24.deb
+
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo dpkg -i discord-0.0.24.deb
+
+
+
 printf "\n \n Done  \n \n"
