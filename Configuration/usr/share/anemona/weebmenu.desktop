@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=WeeMENU
+GenericName=WeeMENU
+Comment=lauch all apps
+Categories=Utility;
+Type=Application
+Exec=xdotool key super+a
+Icon=weebmenu
+Terminal=false
+NoDisplay=false

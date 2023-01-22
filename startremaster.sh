@@ -239,16 +239,16 @@ sudo cp -r "$ANECONF"/usr/lib/os-release /usr/lib/
 sleep 1
 printf "\n Adding MORE '$DISNAME' configuration \n"
 sudo cp -r "$ANECONF"/usr/share/anemona /usr/share/
-sudo cp -r "$ANECONF"/usr/share/icons/* /usr/share/icons/
+sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Yaru/
+sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Reversal-pink/
+sudo cp -r "$ANECONF"/usr/share/icons/Yaru/* /usr/share/icons/Reversal-pink-dark/
 sudo cp -r "$ANECONF"/usr/share/gnome-background-properties/* /usr/share/gnome-background-properties/
 sudo cp -r "$ANECONF"/usr/share/pixmaps/* /usr/share/pixmaps/
 sudo cp -r "$ANECONF"/usr/share/plank /usr/share/
 sudo cp -r "$ANECONF"/usr/share/ubuntu/* /usr/share/ubuntu/
 sleep 1
-sudo snap install chromium
-sudo snap install spotify
-sudo snap install discord
-sudo apt install vlc
-sudo apt install python3
-sudo apt install ubuntu-restricted-extras
+sudo apt install xdotool -y
+sudo apt install vlc -y
+sudo apt install python3 -y
+sudo apt install ubuntu-restricted-extras -y
 printf "\n \n Done  \n \n"
