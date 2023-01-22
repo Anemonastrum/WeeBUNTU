@@ -17,25 +17,19 @@
 - Brand New Wallpapers
 - Brand New Logo
 - Brand New Dock
-- Prebuilt apps added (Spotify, Discord, VLC, Chromium, VSCode)
+- Discord Integrated
+- Chrome Integrated
+- VLC media player
 
 ## Usage
 
 !Internet Access is required to run the scripts!
 
-UNPACK ISO
+Outside Chroot Environment
 
-      bash unpack.sh
-      
-Chroot
-
-      bash chroot.sh
+      sudo cp /etc/apt/sources/list $HOME/cubic/custom-root/etc/apt/sources.list
 
 Inside Chroot Environment
-
-      mount -t proc none /proc
-      mount -t sysfs none /sys
-      mount -t devpts none /dev/pts 
 
       sudo apt update
 
@@ -47,10 +41,6 @@ Inside Chroot Environment
 
       sudo bash startremaster.sh
       
-REPACK ISO
-
-      bash repack.sh
-
 ## References
 
 https://help.ubuntu.com/community/LiveCDCustomization
