@@ -1,11 +1,14 @@
-# DOWNLOADS
+## DOWNLOADS
 
 [![DOWNLOAD](https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/download.png)](https://amikomac-my.sharepoint.com/:u:/g/personal/dtirta_e_students_amikom_ac_id/Ede3c9xkLghOpaN0ZAY_JfcBYEGeh7NasHX0ItKRNSyOew?e=4wsZtr&download=1)
 [![ALT DOWNLOAD](https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/alternative.png)](https://)
 
+## Support My Project
 
+https://trakteer.id/anemonastrum
 
-## Linux Base 
+## About
+WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and Experience for users to enjoy new experience on Ubuntu based distro
 - Ubuntu 22.04.1 Jammy [Link](http://releases.ubuntu.com/jammy/)
 
 <img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/Background/warty-final-ubuntu.png width="auto" height="auto"/>
