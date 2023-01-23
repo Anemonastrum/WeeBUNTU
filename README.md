@@ -5,7 +5,7 @@
 
 ## Support My Project
 
-https://trakteer.id/anemonastrum
+[<img src="https://cdn.trakteer.id/images/embed/trbtn-red-2.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya">](https://trakteer.id/anemonastrum/tip)
 
 ## About
 WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and Experience for users to enjoy new experience on Ubuntu based distro
@@ -34,6 +34,7 @@ WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and
 - Discord Integrated
 - VLC Integrated
 - More Media Codecs
+- Updated Kernel to 5.15.0-58
 
 ## Usage
 
@@ -45,15 +46,19 @@ Outside Chroot Environment
 
 Inside Chroot Environment
 
-      sudo apt update
+      apt update
 
-      sudo apt install git
+      apt install git
 
       git clone http://github.com/Anemonastrum/RemasterUbuntu/
 
       cd RemasterUbuntu
 
-      sudo bash startremaster.sh
+      bash startremaster.sh
+      
+      cd ..
+      
+      rm -rf RemasterUbuntu
       
 ## References
 
