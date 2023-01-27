@@ -1,7 +1,8 @@
 ## DOWNLOADS
 
 [<img src="https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/download.png" height="90" width="230" alt="Download">](https://amikomac-my.sharepoint.com/:u:/g/personal/dtirta_e_students_amikom_ac_id/EbqXJlH3iOtMtnGLJuIwTJgBRtRTqx9mpzVz0E3gPUnvNw?e=dYIsjn&download=1)
-[MD5 HASH](https://amikomac-my.sharepoint.com/:u:/g/personal/dtirta_e_students_amikom_ac_id/Ede3c9xkLghOpaN0ZAY_JfcBD5FPKGqWK5SJuDO2xQL8JA?e=pXJKEt&download=1)
+
+[MD5 HASH](https://amikomac-my.sharepoint.com/:u:/g/personal/dtirta_e_students_amikom_ac_id/ESR1ox5LyFJBiOCWrHzrtSwB-LQNifiCB1DeT1nWRSRpKg?e=zMVK6K&download=1)
 
 ## Support My Project
 
