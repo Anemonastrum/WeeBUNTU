@@ -26,9 +26,11 @@ WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and
 - New Sounds Theme
 - New Installer Images
 - New Wallpapers
-- Brand Boot Logo
-- Brand New Wallpapers
-- Brand New Settings Logo
+- New Boot Theme
+- Blurred Shell
+- New Panel
+- WeeMenu
+- New Settings Logo
 - Plank Dock
 - X11 Display Manager instead of Wayland
 - Chrome Integrated
@@ -36,6 +38,28 @@ WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and
 - VLC Integrated
 - More Media Codecs
 - Updated Kernel to 5.15.0-58
+
+## Screenshots
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/about.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/background.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/panel.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/blur.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/dark.png width="auto" height="auto"/>
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/light.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/files_dark.png width="auto" height="auto"/>
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/files_light.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/chrome.png width="auto" height="auto"/>
+
+<img src=https://github.com/Anemonastrum/RemasterUbuntu/raw/main/docs/Screenshots/weemenu.png width="auto" height="auto"/>
+
+
 
 ## Usage
 
