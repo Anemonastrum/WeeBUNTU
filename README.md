@@ -65,25 +65,9 @@ WeeBUNTU is a distro based on Ubuntu 22.04 focused mainly on User Interfaces and
 
 !Internet Access is required to run the scripts!
 
-Outside Chroot Environment
+Inside Chroot
 
-      sudo cp /etc/apt/sources/list $HOME/cubic/custom-root/etc/apt/sources.list
-
-Inside Chroot Environment
-
-      apt update
-
-      apt install git
-
-      git clone http://github.com/Anemonastrum/RemasterUbuntu/
-
-      cd RemasterUbuntu
-
-      bash startremaster.sh
-      
-      cd ..
-      
-      rm -rf RemasterUbuntu
+      curl https://raw.githubusercontent.com/Anemonastrum/WeeBUNTU/main/start.sh || bash
       
 ## References
 
